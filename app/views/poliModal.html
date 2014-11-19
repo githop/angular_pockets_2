@@ -1,0 +1,21 @@
+<div class="row" >
+<h3>{{pol.title}} {{pol.full_name}}</h3>
+<span>State: {{pol.state}}</span>
+<span> Party: {{pol.party}}</span> |
+<span>Contributions from Pac: {{pol.contribution.pac | currency}}| from Indivudals: {{pol.contribution.individual | currency}}</span> |
+<span>In-State Contributions: {{pol.contribution.in_state | currency}} | Out-of-State: {{pol.contribution.out_state | currency}}</span>
+ <button class="button small right" ng-click="ok()">close</button>
+  <div class="12-large columns">
+    <accordion close-others="true">
+      <accordion-group heading="Contributions by Org" is-open="true" ng-click="drawChart()">
+        <highchart id="chart1" config="orgChartConfig"></highchart>
+      </accordion-group>
+      <accordion-group heading="Contributions by Sector" ng-click="drawChart()">
+        <highchart id="chart1" config="sectorChartConfig"></highchart>
+      </accordion-group>
+      <accordion-group heading="What I'm Saying" ng-click="drawChart()">
+        <highchart id="chart1" config="wordChartConfig"></highchart>
+      </accordion-group>
+    </accordion>
+  </div>
+</div>

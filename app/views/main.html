@@ -1,0 +1,88 @@
+<!-- parallax-content  -->
+<div>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="row">
+        <div class="large-7 medium-7 small-12 columns">
+          <label>Search
+            <input type="text" ng-model="pol" typeahead="pol for pol in typeahead($viewValue)" placeholder="Search politicians" typeahead-loading="loadingloactions" typeahead-on-select="searchResults(pol)" />
+          </label>
+        </div>
+        <div class="large-5 medium-4 small-12 columns">
+          <label>States
+            <select ng-model="selected" ng-change="getPoliFromState(selected)" ng-options="state.name for state in states">
+              <option value="">State</option>
+            </select>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="row" ng-repeat="politician in politicians">
+        <div class="large-3 medium-3 small-6 columns" ng-repeat="pol in politician">
+          <div ng-click="open(pol)" class="{{pol.party + ' shadow_card'}}">
+            <div class="text-center">
+              <img ng-src="{{pol.loading}}" id="modalSpinner"/>
+              <img ng-src="{{pol.img}}"  id="poliImg"/>
+            </div>
+            <div class="mny-grn panel">
+              <h5>{{pol.title}} {{pol.full_name}}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div ng-show="banner">
+    <div class="row">
+      <div class="large-8 columns">
+        <h4>Welcome to Padded Pockets</h4>
+        <div class="row">
+          <div class="large-6 columns">
+            <p>Curious to see who is sponsoring your Senator? Here you can find the answer to that and some other interesting things as well. Search for politicians (House or Senate) to see organizations and sectors of the economy that are financing them. You can also see a breakdown of their local vs out-of-state contributions.</p>
+          </div>
+          <div class="large-6 columns">
+            <blockquote>"Economic elites and organized interest groups play a substantial part in affecting public policy, but the general public has little or no independent influence."
+              <cite><a href="http://journals.cambridge.org/action/displayAbstract?fromPage=online&aid=9354310">Testing Theories of American Politics: Elites, Interest Groups, and Average Citizens</a>
+              </cite>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+      <div class="large-4 columns">
+        <div class="text-center">
+          <figure>
+            <img ng-src="images/cng.jpg" class="shadow max">
+            <figcaption>
+              <em>"I like turtles"</em>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-4 columns">
+        <div class="text-center">
+          <figure>
+            <img ng-src="images/boehner.jpg" class="shadow max">
+            <figcaption>
+              <em>It's Bay-ner</em>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="large-8 columns">
+        <h4>The Horses Mouth</h4>
+        <p>See what your representatives are saying on the Hill. You can see a list of their 10 most uttered words. Sometimes what you are not saying is just as important; see a list of their least 10 said words as well.</p>
+        <p>Curious as to where the data comes from? Check out <a href="http://sunlightfoundation.com">The Sunlight Foundation</a>'s api. It stockpiles a bunch of useful data and makes it very accessible. It turned out to be very handy for this application.</p>
+      </div>
+    </div>
+  </div>
+</div>

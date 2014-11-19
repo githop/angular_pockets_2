@@ -1,0 +1,142 @@
+$mny-grn: #CBFF27;
+$bck-grd: #F1F3F2;
+$btr-bll: #E9BB65;
+$blk-blk: #121212;
+$dem-pty: #1573AA;
+$gop-pty: #A40000;
+
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+	background-color: $bck-grd;
+	font-family: 'Roboto', sans-serif;
+}
+
+a {
+	font-weight: bold;
+	color: $btr-bll;
+	&:hover { text-decoration: underline;
+						color: $mny-grn;}
+}
+
+#modalSpinner {
+  position: absolute;
+  top: 90px;
+  right: 90px;
+}
+
+.pol_modal{
+  width:100%;
+}
+
+.parallax-background {
+	background-color: $blk-blk;
+	height: 440px;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	background-size: cover;
+	position: fixed;
+	width: 100%;
+}
+
+.parallax-content {
+	max-width: 100%;
+	position: relative;
+	top: 320px;
+	padding: 50px;
+	font-size: 20px;
+	background-color: #fff;
+}
+/*
+.hero__background {
+  position: absolute;
+  top: -153%;
+  left: 0;
+  width: 100%;
+  // Where the magic happens
+  -webkit-filter: blur(13px);
+  -webkit-transform: translate3d(0, 0, 0);
+} */
+
+.hero__title {
+  font-size: 5em;
+  a {
+    color: $blk-blk;
+  }
+}
+
+.mny-grn {
+	background-color: $mny-grn;
+	padding-left: 3px;
+  padding-right: 3px;
+}
+
+.rep {
+  background-color: $gop-pty;
+}
+
+.dem {
+  background-color: $dem-pty;
+}
+
+.shadow {
+	-webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+.shadow_card {
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         1px 1px 5px 0px rgba(50, 50, 50, 0.75);
+  &:hover {
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(233, 187, 101, 5.0);
+  -moz-box-shadow:    1px 1px 5px 0px rgba(233, 187, 101, 5.0);
+  box-shadow:         1px 1px 5px 0px rgba(233, 187, 101, 5.0);
+  };
+}
+
+.full-width {
+  max-width: 1400px;
+}
+
+.footer {
+  background-color: $blk-blk;
+  padding: 2rem 4rem;
+  text-align: center;
+  color: #fff;
+}
+.footer i {
+  font-size: 100px;
+}
+
+.footer h4 {
+  color: #fff;
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.footer p, .footer a {
+  font-weight: 300;
+  font-size: .8em;
+  color: #fff;
+}
+
+@media only screen and (min-width: 40.063em) {
+  .footer .columns:nth-child(n+2) {
+    border-left: 1px solid #b3b3b3;
+    min-height: 280px;
+  }
+}
+.footer-links {
+  list-style-type: none;
+}
+.footer-links li {
+  margin-top: .5em;
+}
